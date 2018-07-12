@@ -79,7 +79,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8952.so
+lib/hw/camera.vendor.msm8952.so
 lib/libcamerabgproc-jni.so
 lib/libcamerabgprocservice.so
 lib/libmm-qcamera.so
