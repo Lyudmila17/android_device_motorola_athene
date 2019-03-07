@@ -52,7 +52,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_CUSTOM_DTBTOOL := dtbTool_moto
-TARGET_KERNEL_CONFIG := lineage_athene_defconfig
+TARGET_KERNEL_CONFIG := athene_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8952
 
 # Filesystem
