@@ -89,3 +89,5 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_THEME := portrait_hdpi
+TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_TWRPAPP := true
