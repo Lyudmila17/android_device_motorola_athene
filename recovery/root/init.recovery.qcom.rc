@@ -1,27 +1,8 @@
-
-on early-init
-    mkdir /firmware 0771 system system
-
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mkdir /firmware 0771 system system
-    mount ext4 /dev/block/bootdevice/by-name/modem /firmware ro
-
-    mkdir /vendor/firmware
-    mkdir /vendor/firmware/keymaster
-
-    symlink /firmware/image/keymaster.b00 /vendor/firmware/keymaster/keymaster.b00
-    symlink /firmware/image/keymaster.b01 /vendor/firmware/keymaster/keymaster.b01
-    symlink /firmware/image/keymaster.b02 /vendor/firmware/keymaster/keymaster.b02
-    symlink /firmware/image/keymaster.b03 /vendor/firmware/keymaster/keymaster.b03
-    symlink /firmware/image/keymaster.mdt /vendor/firmware/keymaster/keymaster.mdt
-
-    chmod 0777 /dev/qseecom
-    chown system mot_tpapi /dev/qseecom
-    chmod 0664 /dev/ion
-    chown system system /dev/ion
+    export ANDROID_ROOT /system_root
 
     setprop ro.board.platform msm8952
     setprop sys.usb.ffs.aio_compat 1
