@@ -69,6 +69,7 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/fsg:/fsg \
     /vendor/firmware_mnt:/firmware
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
